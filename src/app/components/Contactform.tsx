@@ -103,10 +103,12 @@ export default function ContactForm({ lang }: ContactFormProps) {
 
           {/* Company */}
           <div>
-            <label className="block text-xs font-semibold text-gray-700 mb-1">
+            <label htmlFor="company" className="block text-xs font-semibold text-gray-700 mb-1">
               {labels.company} <span className="text-red-400">*</span>
             </label>
             <input
+              id="company"
+              name="company"
               type="text"
               value={company}
               onChange={e => setCompany(e.target.value)}
@@ -117,10 +119,12 @@ export default function ContactForm({ lang }: ContactFormProps) {
 
           {/* Name */}
           <div>
-            <label className="block text-xs font-semibold text-gray-700 mb-1">
+            <label htmlFor="contact-name" className="block text-xs font-semibold text-gray-700 mb-1">
               {labels.name} <span className="text-red-400">*</span>
             </label>
             <input
+              id="contact-name"
+              name="contact-name"
               type="text"
               value={name}
               onChange={e => setName(e.target.value)}
@@ -131,10 +135,12 @@ export default function ContactForm({ lang }: ContactFormProps) {
 
           {/* Email */}
           <div>
-            <label className="block text-xs font-semibold text-gray-700 mb-1">
+            <label htmlFor="email" className="block text-xs font-semibold text-gray-700 mb-1">
               {labels.email} <span className="text-red-400">*</span>
             </label>
             <input
+              id="email"
+              name="email"
               type="email"
               value={email}
               onChange={e => setEmail(e.target.value)}
@@ -145,9 +151,11 @@ export default function ContactForm({ lang }: ContactFormProps) {
 
           {/* Contact */}
           <div>
-            <label className="block text-xs font-semibold text-gray-700 mb-1">{labels.contact}</label>
+            <label htmlFor="contact-number" className="block text-xs font-semibold text-gray-700 mb-1">{labels.contact}</label>
             <div className="flex gap-2">
               <select
+                id="contact-prefix"
+                name="contact-prefix"
                 value={contactPrefix}
                 onChange={e => setContactPrefix(e.target.value)}
                 className={selectCls}
@@ -158,6 +166,8 @@ export default function ContactForm({ lang }: ContactFormProps) {
                 }
               </select>
               <input
+                id="contact-number"
+                name="contact-number"
                 type="text"
                 value={contactNumber}
                 onChange={e => setContactNumber(e.target.value)}
@@ -169,10 +179,12 @@ export default function ContactForm({ lang }: ContactFormProps) {
 
           {/* Message */}
           <div>
-            <label className="block text-xs font-semibold text-gray-700 mb-1">
+            <label htmlFor="message" className="block text-xs font-semibold text-gray-700 mb-1">
               {labels.message} <span className="text-red-400">*</span>
             </label>
             <textarea
+              id="message"
+              name="message"
               rows={4}
               value={message}
               onChange={e => setMessage(e.target.value)}
@@ -183,9 +195,11 @@ export default function ContactForm({ lang }: ContactFormProps) {
 
           {/* Country */}
           <div>
-            <label className="block text-xs font-semibold text-gray-700 mb-1">{labels.country}</label>
+            <label htmlFor="country" className="block text-xs font-semibold text-gray-700 mb-1">{labels.country}</label>
             {isKR ? (
               <input
+                id="country"
+                name="country"
                 type="text"
                 value="한국"
                 disabled
@@ -193,6 +207,8 @@ export default function ContactForm({ lang }: ContactFormProps) {
               />
             ) : (
               <input
+                id="country"
+                name="country"
                 type="text"
                 value={country}
                 onChange={e => setCountry(e.target.value)}
