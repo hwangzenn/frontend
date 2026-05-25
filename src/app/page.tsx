@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { getPosts } from "@/lib/ghost";
 import HomeClient from "./components/HomeClient";
 
