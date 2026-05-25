@@ -37,7 +37,7 @@ const LANG_TAG: Record<'EN' | 'KR', string> = {
 export default function TechBlog({ posts, lang }: TechBlogProps) {
   const c = t[lang];
   const visiblePosts = posts
-    .filter(post => post.tags?.[0]?.slug === LANG_TAG[lang])
+    .filter(post => post.tags?.some(tag => tag.slug === LANG_TAG[lang]))
     .slice(0, 3);
 
   return (

@@ -55,7 +55,7 @@ function BlogContent() {
     getPosts().then((data) => setAllPosts(data as Post[]));
   }, []);
 
-  const langPosts = allPosts.filter(p => p.tags?.[0]?.slug === LANG_TAG[lang]);
+  const langPosts = allPosts.filter(p => p.tags?.some(tag => tag.slug === LANG_TAG[lang]));
   const c = t[lang];
 
   return (
