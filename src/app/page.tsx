@@ -1,4 +1,5 @@
-export const dynamic = 'force-dynamic';
+'use client';
+import { useState, useEffect } from "react";
 import { getPosts } from "@/lib/ghost";
 import HomeClient from "./components/HomeClient";
 
@@ -10,9 +11,15 @@ interface Post {
   feature_image?: string | null;
   published_at?: string | null;
   slug: string;
+  tags?: { name: string; slug: string }[];
 }
 
-export default async function HomePage() {
-  const posts = (await getPosts()) as Post[];
+export default function HomePage() {
+  const [posts, setPosts] = useState<Post[]>([]);
+
+  useEffect(() => {
+    getPosts().then((data) => setPosts(data as Post[]));
+  }, []);
+
   return <HomeClient posts={posts} />;
 }
