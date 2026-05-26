@@ -4,14 +4,14 @@ interface HeroProps {
 
 const t = {
   EN: {
-    title: <>From Innovation to Implementation:<br className="hidden md:inline" /> Engineering the Zero-Defect Future</>,
-    subtitle: 'Leveraging AI-powered computer vision, Factorix identifies defects before they occur. We optimize your bottom line through zero-defect reliability.',
+    title: <>Manufacturing Intelligence,<br className="hidden md:inline" /> Redesigned.</>,
+    subtitle: 'AI-powered smart factory solutions for bio, beauty & semiconductor industries.CES Innovation Award-winning technology that eliminates defects and breaks communication barriers.',
     btn1: 'View Case Studies →',
     btn2: 'Request a Demo',
   },
   KR: {
-    title: <>혁신에서 실현까지:<br className="hidden md:inline" /> 무결점 미래를 설계합니다</>,
-    subtitle: 'AI 기반 컴퓨터 비전으로 결함 발생 전 사전 감지. Factorix는 무결점 신뢰성으로 귀사의 생산성을 최적화합니다.',
+    title: <>제조 현장의 지능이<br className="hidden md:inline" /> 다시 설계됩니다</>,
+    subtitle: 'CES 혁신상 수상 기술로 불량률을 낮추고, 현장 소통의 장벽을 없앱니다.',
     btn1: '사례 연구 보기 →',
     btn2: '데모 신청',
   },
