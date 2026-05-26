@@ -128,7 +128,7 @@ const storiesData = {
   },
 };
 
-const sectionTitle = { EN: 'Success Stories', KR: '성공 사례' };
+const sectionTitle = { EN: 'Built for the Industries That Demand Precision', KR: '정밀도가 곧 신뢰인 산업을 위해' };
 const viewCaseStudy = { EN: 'View Case Study →', KR: '사례 연구 보기 →' };
 
 export default function Industry({ lang }: IndustryProps) {
