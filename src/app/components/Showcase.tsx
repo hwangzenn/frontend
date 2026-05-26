@@ -12,8 +12,7 @@ const t = {
     product1Desc: 'Maximize efficiency with CES-Recognized Wearable Technology. Designed seamlessly for rugged environments, providing hands-free access to critical data and step-by-step guidance to prevent human error.',
     cesBadge: 'CES Innovation Award Winner',
     product2Title: 'Detect. Correct. Before It Costs You.',
-    product2Desc: 'AI-powered auto-correction identifies dispensing deviations the moment they occur — driving defect rates to zero across bio, pharma, medical device & battery manufacturing.
-',
+    product2Desc: 'AI-powered auto-correction identifies dispensing deviations the moment they occur — driving defect rates to zero across bio, pharma, medical device & battery manufacturing.',
   },
   KR: {
     headline: '두 가지 기술, 하나의 기준 — 불량 제로',
