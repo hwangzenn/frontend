@@ -73,7 +73,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
 
   const labels = {
     section: 'Contact Us',
-    heading: isKR ? '오늘 문의해 주세요' : 'Get in touch today',
+    heading: isKR ? '도입 문의하기' : 'Request a Demo',
     company: isKR ? '기업 또는 단체명' : 'Company / Organization',
     name: isKR ? '담당자명' : 'Contact Person',
     email: isKR ? '이메일' : 'Email',

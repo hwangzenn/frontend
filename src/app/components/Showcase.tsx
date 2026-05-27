@@ -33,7 +33,7 @@ export default function Showcase({ lang }: ShowcaseProps) {
   return (
     <section id="product" className="pt-24 pb-16 max-w-7xl mx-auto px-6 space-y-24">
 
-      <h2 className="text-xl font-light tracking-tight text-slate-500 text-center">
+      <h2 className="text-xl font-light tracking-tight text-slate-950 text-center">
         {c.headline}
       </h2>
 
@@ -43,7 +43,7 @@ export default function Showcase({ lang }: ShowcaseProps) {
         </div>
         <div className="space-y-6">
           <h3 className="tracking-tight text-slate-950">
-            <span className="block text-sm font-medium text-slate-400 mb-1">{c.product1Category}</span>
+            <span className="block text-sm font-light text-slate-950 mb-1">{c.product1Category}</span>
             <span className="text-3xl font-bold">{c.product1Tagline}</span>
           </h3>
           <p className="text-gray-600 leading-relaxed font-light">{c.product1Desc}</p>
@@ -56,7 +56,7 @@ export default function Showcase({ lang }: ShowcaseProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="space-y-6 order-2 md:order-1">
           <h3 className="tracking-tight text-slate-950">
-            <span className="block text-sm font-medium text-slate-400 mb-1">{c.product2Category}</span>
+            <span className="block text-sm font-light text-slate-950 mb-1">{c.product2Category}</span>
             <span className="text-3xl font-bold">{c.product2Tagline}</span>
           </h3>
           <p className="text-gray-600 leading-relaxed font-light">{c.product2Desc}</p>

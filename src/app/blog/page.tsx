@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect, Suspense } from "react";
 import { getPosts } from "@/lib/ghost";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import Navbar from "../components/Navbar";
 import BlogSubNav from "../components/BlogSubNav";
 import NewsletterPopup from "../components/NewsletterPopup";
@@ -43,6 +43,7 @@ const t = {
 
 function BlogContent() {
   const { lang } = useLang();
+  const router = useRouter();
   const searchParams = useSearchParams();
   const defaultCategory = searchParams.get("category") || "all";
   const defaultSearch = searchParams.get("search") || "";
@@ -91,7 +92,15 @@ function BlogContent() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {filtered.map((post) => (
-              <Link href={`/blog/${post.slug}`} key={post.id} className="flex">
+              <a
+                href={`/blog/${post.slug}`}
+                key={post.id}
+                className="flex"
+                onClick={(e) => {
+                  e.preventDefault();
+                  router.push(`/blog/${post.slug}`);
+                }}
+              >
                 <article className="flex flex-col w-full bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition cursor-pointer">
                   <div className="aspect-video bg-slate-100 relative overflow-hidden shrink-0">
                     {post.feature_image && (
@@ -108,7 +117,7 @@ function BlogContent() {
                     </div>
                   </div>
                 </article>
-              </Link>
+              </a>
             ))}
           </div>
         )}
